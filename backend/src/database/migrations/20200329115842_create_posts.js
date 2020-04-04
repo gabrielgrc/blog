@@ -1,7 +1,7 @@
 exports.up = function(knex) {//exports.up será a configuração da nossa tabela
     return knex.schema.createTable('posts', function(table){
         //chave primária que se auto incrementa a cada post
-        table.increments()
+        table.increments('post_id').primary
 
         table.string('category').notNullable()
         table.string('title').notNullable()
